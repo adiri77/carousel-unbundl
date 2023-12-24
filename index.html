@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car Lelo - Featured Products Carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        /* Header styles */
+        h1 {
+            background: linear-gradient(to right, #007bff, #00bfff);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Carousel styles */
+        .carousel-item {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-caption {
+            color: #333;
+        }
+
+        /* Navigation arrow styles */
+        .carousel-control-prev,
+        .carousel-control-next {
+            color: #007bff;
+            font-size: 2em;
+        }
+
+        /* Navigation arrow hover effect */
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Car Lelo</h1>
+        <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Add your featured products here as carousel items -->
+                <div class="carousel-item active">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/p90475606-highres-rolls-royce-phantom-1677268219.jpg?crop=0.663xw:0.496xh;0.136xw,0.372xh&resize=1200:*" alt="Product 1">
+                    <div class="carousel-caption">
+                        <h5>ROLLS-ROYCE</h5>
+                        <p>Sports cars might be our specialty here at Road & Track, but luxury cars are a close second. Driving a well-built Rolls-Royce or Bentley is a spectacular experience all its own.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/jaguar_xj_r_sport_003.jpg?w=827&h=465" alt="Product 2">
+                    <div class="carousel-caption">
+                        <h5>Jaguar XJ</h5>
+                        <p>This is a lovely big limo. So svelte, it can even make a politician look cool.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/06_063-2.jpg?w=827&h=465" alt="Product 2">
+                    <div class="carousel-caption">
+                        <h5>
+                            Porsche Panamera</h5>
+                        <p>Better looks clothe more tech than we could ever explain. Still the driver's lux choice.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/413extreme-silver-33-1.jpg?w=827&h=465" alt="Product 2">
+                    <div class="carousel-caption">
+                        <h5>
+                            Bentley Bentayga</h5>
+                        <p>The luxury SUV bar has been raised. Bentley's bold claims are justified.</p>
+                    </div>
+                </div>
+                
+                <!-- Add more product items as needed -->
+            </div>
+
+            <!-- Add navigation arrows -->
+            <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#featuredCarousel').carousel({
+                interval: 3000, // Set the interval for automatic rotation in milliseconds (e.g., 5000 for 5 seconds)
+                pause: 'hover', // Pause on hover
+            });
+        });
+    </script>
+
+</body>
+
+</html>
