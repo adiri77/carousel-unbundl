@@ -16,7 +16,7 @@
         /* Header styles */
         h1 {
             background: linear-gradient(to right, #007bff, #00bfff);
-            -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
             margin-bottom: 40px;
             font-size: 2.5em;
@@ -24,23 +24,46 @@
         }
 
         /* Carousel styles */
+        #featuredCarousel {
+            max-height: 500px; /* Fixed height for the carousel */
+            overflow: hidden;
+        }
+
         .carousel-item {
             text-align: center;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .carousel-item img {
-            max-width: 100%;
+            width: 100%; /* Make the images fill the container */
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .carousel-caption {
-            color: #333;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .carousel-caption h5 {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption p {
+            color: #555;
+            font-size: 1em;
         }
 
         /* Navigation arrow styles */
@@ -66,32 +89,30 @@
             <div class="carousel-inner">
                 <!-- Add your featured products here as carousel items -->
                 <div class="carousel-item active">
-                    <img src="https://hips.hearstapps.com/hmg-prod/images/p90475606-highres-rolls-royce-phantom-1677268219.jpg?crop=0.663xw:0.496xh;0.136xw,0.372xh&resize=1200:*" alt="Product 1">
-                    <div class="carousel-caption">
+                    <div class="container">
                         <h5>ROLLS-ROYCE</h5>
-                        <p>Sports cars might be our specialty here at Road & Track, but luxury cars are a close second. Driving a well-built Rolls-Royce or Bentley is a spectacular experience all its own.</p>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/p90475606-highres-rolls-royce-phantom-1677268219.jpg?crop=0.663xw:0.496xh;0.136xw,0.372xh&resize=1200:*" alt="Product 1">
+                        <p>Sports cars might be our specialty here at Road & Track, but luxury cars are a close second.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/jaguar_xj_r_sport_003.jpg?w=827&h=465" alt="Product 2">
-                    <div class="carousel-caption">
+                    <div class="container">
                         <h5>Jaguar XJ</h5>
+                        <img src="https://www.topgear.com/sites/default/files/news-listicle/image/jaguar_xj_r_sport_003.jpg?w=827&h=465" alt="Product 2">
                         <p>This is a lovely big limo. So svelte, it can even make a politician look cool.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/06_063-2.jpg?w=827&h=465" alt="Product 2">
-                    <div class="carousel-caption">
-                        <h5>
-                            Porsche Panamera</h5>
+                    <div class="container">
+                        <h5>Porsche Panamera</h5>
+                        <img src="https://www.topgear.com/sites/default/files/news-listicle/image/06_063-2.jpg?w=827&h=465" alt="Product 3">
                         <p>Better looks clothe more tech than we could ever explain. Still the driver's lux choice.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://www.topgear.com/sites/default/files/news-listicle/image/413extreme-silver-33-1.jpg?w=827&h=465" alt="Product 2">
-                    <div class="carousel-caption">
-                        <h5>
-                            Bentley Bentayga</h5>
+                    <div class="container">
+                        <h5>Bentley Bentayga</h5>
+                        <img src="https://www.topgear.com/sites/default/files/news-listicle/image/413extreme-silver-33-1.jpg?w=827&h=465" alt="Product 4">
                         <p>The luxury SUV bar has been raised. Bentley's bold claims are justified.</p>
                     </div>
                 </div>
